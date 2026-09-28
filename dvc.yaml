@@ -15,8 +15,7 @@ stages:
     params:
      - preprocess.test_size
      - preprocess.seed
-    outs:
-     - data/processed
+
 
   train:
     cmd: python src/train.py

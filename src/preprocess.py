@@ -16,8 +16,8 @@ y_test = np.load("data/raw/y_test.npy")
 test_size = config["preprocess"]["test_size"]
 seed = config["preprocess"]["seed"]
 
-X_train = X_train.astype('float32')/255.0
-X_test = X_test.astype('float32')/255.0
+X_train = X_train.astype('float32') / 127.5 - 1.0
+X_test = X_test.astype('float32') / 127.5 - 1.0
 
 X_train , X_val , y_train , y_val = train_test_split(X_train , y_train , test_size = test_size , random_state = seed)
 

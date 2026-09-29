@@ -29,6 +29,12 @@ stages:
       params.yaml:
         preprocess.seed: 101
         preprocess.test_size: 0.2
+    outs:
+    - path: data/processed
+      hash: md5
+      md5: 7abc8855b16ee35569e0b650a470f903.dir
+      size: 219590768
+      nfiles: 6
   train:
     cmd: python src/train.py
     deps:
